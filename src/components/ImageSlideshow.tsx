@@ -202,7 +202,7 @@ const ImageSlideshow: React.FC<ImageSlideshowProps> = ({
           </button>
           <button
             onClick={nextSlide}
-            className="absolute right-20 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/60 text-white p-3 rounded-full transition"
+            className="absolute right-8 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/60 text-white p-3 rounded-full transition"
             aria-label="Next slide"
           >
             <ChevronRight size={28} />
