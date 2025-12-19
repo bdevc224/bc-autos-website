@@ -195,14 +195,14 @@ const ImageSlideshow: React.FC<ImageSlideshowProps> = ({
         <>
           <button
             onClick={prevSlide}
-            className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/60 text-white p-3 rounded-full transition"
+            className="absolute left-0 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/60 text-white p-3 rounded-full transition"
             aria-label="Previous slide"
           >
             <ChevronLeft size={28} />
           </button>
           <button
             onClick={nextSlide}
-            className="absolute right-8 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/60 text-white p-3 rounded-full transition"
+            className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/60 text-white p-3 rounded-full transition"
             aria-label="Next slide"
           >
             <ChevronRight size={28} />
