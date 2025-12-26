@@ -6,48 +6,23 @@ import {
   FaPhone,
   FaTiktok,
 } from "react-icons/fa";
-import ImageSlideshow from "../components/ImageSlideshow";
+import HeroVideo from "../components/HeroVideo";
 import FadeInWhenVisible from "../components/FadeInWhenVisible";
 import FadeInWhenVisibleLeft from "../components/FadeInWhenVisibleLeft";
 import FadeInWhenVisibleRight from "../components/FadeInWhenVisibleRight";
 import Footer from "../components/Footer";
 
-interface ImageSlide {
-  url: string;
-  caption: string;
-  subCaption: string;
-}
-
-function Hero() {
-  const slides: ImageSlide[] = [
-    { url: "/Images/logo.PNG", caption: "", subCaption: "" },
-    { url: "/Images/img1.JPG", caption: "", subCaption: "" },
-    { url: "/Images/img2.JPG", caption: "", subCaption: "" },
-    { url: "/Images/img3.JPG", caption: "", subCaption: "" },
-    { url: "/Images/img4.JPG", caption: "", subCaption: "" },
-    { url: "/Images/img5.JPG", caption: "", subCaption: "" },
-    { url: "/Images/img6.JPG", caption: "", subCaption: "" },
-    { url: "/Images/img7.JPG", caption: "", subCaption: "" },
-    { url: "/Images/img8.JPG", caption: "", subCaption: "" },
-  ];
-
+const Hero: React.FC = () => {
   return (
-    <section id="home" className="overflow-hidden mt-16 md:mt-20 scroll-mt-20 w-full">
-      <div className="w-full max-w-[100vw] overflow-hidden">
-        <ImageSlideshow
-          images={slides}
-          interval={4000}
-          animation="slide"
-          autoPlay={true}
-          pauseOnHover={true}
-          showProgress={true}
-          showControls={true}
-          showIndicators={true}
-        />
-      </div>
-    </section>
+    <div className="relative w-full h-screen">
+      <HeroVideo
+        videoSrc="/Images/bcautoschristmas.MOV"
+        overlay={false}
+        className="w-full h-full object-cover flex items-center justify-center"
+      />
+    </div>
   );
-}
+};
 
 function About() {
   return (
@@ -246,7 +221,7 @@ function Contact() {
         <FadeInWhenVisibleRight>
           <div className="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96">
             <img
-              src="/Images/logo.PNG"
+              src="/Images/bcautoschristmas.PNG"
               className="w-full h-full rounded-xl object-cover border-4 shadow-xl shadow-blue-600"
               alt="BC Autos Logo"
             />
@@ -301,8 +276,12 @@ function Contact() {
               </a>
             </div>
             <h1 className="font-heading font-bold text-xl sm:text-2xl md:text-3xl text-center mt-6 sm:mt-8">
-              BC AUTOS
+              BC AUTOS <br />
             </h1>
+
+            <p className="font-body text-base sm:text-lg md:text-xl lg:text-2xl px-2 sm:px-4 md:px-6">
+              Tis a season to be jolly.
+            </p>
           </div>
         </FadeInWhenVisibleLeft>
       </div>
