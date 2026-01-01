@@ -280,7 +280,7 @@ function Contact() {
             </h1>
 
             <p className="font-body text-base sm:text-lg md:text-xl lg:text-2xl px-2 sm:px-4 md:px-6">
-              Tis a season to be jolly.
+              This is a New Year, make the most of it.
             </p>
           </div>
         </FadeInWhenVisibleLeft>
