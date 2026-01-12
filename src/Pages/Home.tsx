@@ -6,23 +6,54 @@ import {
   FaPhone,
   FaTiktok,
 } from "react-icons/fa";
-import HeroVideo from "../components/HeroVideo";
+import ImageSlideshow from "../components/ImageSlideshow";
 import FadeInWhenVisible from "../components/FadeInWhenVisible";
 import FadeInWhenVisibleLeft from "../components/FadeInWhenVisibleLeft";
 import FadeInWhenVisibleRight from "../components/FadeInWhenVisibleRight";
 import Footer from "../components/Footer";
 
-const Hero: React.FC = () => {
+interface ImageSlide {
+  url: string;
+  caption: string;
+  subCaption: string;
+}
+
+function Hero() {
+  const slides: ImageSlide[] = [
+    { url: "/Images/logo.PNG", caption: "BC AUTOS", subCaption: "We deal on different types cars both in Enugu and Abuja" },
+    { url: "/Images/img1.JPG", caption: "THE 2013 MERCEDES BENZ ML350", subCaption: "This is a sample of the kind of cars we sell here!!!" },
+    { url: "/Images/img2.JPG", caption: "THE 2013 MERCEDES BENZ ML350 INTERIOR", subCaption: "This is a sample of the kind of cars we sell here!!!" },
+    { url: "/Images/img3.JPG", caption: "THE 2014 MERCEDES BENZ C300", subCaption: "This is a sample of the kind of cars we sell here!!!" },
+    { url: "/Images/img4.JPG", caption: "THE 2014 MERCEDES BENZ C300 INTERIOR", subCaption: "This is a sample of the kind of cars we sell here!!!" },
+    { url: "/Images/img5.JPG", caption: "THE 2008 TOYOTA CAMRY (SPIDER)", subCaption: "This is a sample of the kind of cars we sell here!!!" },
+    { url: "/Images/img6.JPG", caption: "THE 2008 TOYOTA CAMRY (SPIDER) INTERIOR", subCaption: "This is a sample of the kind of cars we sell here!!!" },
+    { url: "/Images/img7.JPG", caption: "THE 2010 LEXUS RX350", subCaption: "This is a sample of the kind of cars we sell here!!!" },
+    { url: "/Images/img8.JPG", caption: "THE 2010 LEXUS RX350 INTERIOR", subCaption: "This is a sample of the kind of cars we sell here!!!" },
+    { url: "/Images/img9.JPG", caption: "THE 2015 MERCEDES G63", subCaption: "This is a sample of the kind of cars we sell here!!!" },
+    { url: "/Images/img10.JPG", caption: "THE 2015 MERCEDES G63 INTERIOR", subCaption: "This is a sample of the kind of cars we sell here!!!" },
+    { url: "/Images/img11.jpg", caption: "THE 2012 HYUNDAI SONATA", subCaption: "This is a sample of the kind of cars we sell here!!!" },
+    { url: "/Images/img12.jpg", caption: "THE 2015 HYUNDAI SONATA", subCaption: "This is a sample of the kind of cars we sell here!!!" },
+    { url: "/Images/img13.jpg", caption: "THE 2014 MERCEDES BENZ E350", subCaption: "This is a sample of the kind of cars we sell here!!!" },
+  ];
+
   return (
-    <div className="relative w-full h-screen">
-      <HeroVideo
-        videoSrc="/Images/bcautoschristmas.MOV"
-        overlay={false}
-        className="w-full h-full object-cover flex items-center justify-center"
-      />
-    </div>
+    <section id="home" className="overflow-hidden mt-16 md:mt-20 scroll-mt-20 w-full">
+      <div className="w-full max-w-[100vw] overflow-hidden">
+        <ImageSlideshow
+          images={slides}
+          interval={4000}
+          animation="slide"
+          autoPlay={true}
+          pauseOnHover={true}
+          showProgress={true}
+          showControls={true}
+          showIndicators={true}
+        />
+      </div>
+    </section>
   );
-};
+}
+
 
 function About() {
   return (
@@ -221,7 +252,7 @@ function Contact() {
         <FadeInWhenVisibleRight>
           <div className="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96">
             <img
-              src="/Images/bcautoschristmas.PNG"
+              src="/Images/logo.PNG"
               className="w-full h-full rounded-xl object-cover border-4 shadow-xl shadow-blue-600"
               alt="BC Autos Logo"
             />
@@ -280,7 +311,8 @@ function Contact() {
             </h1>
 
             <p className="font-body text-base sm:text-lg md:text-xl lg:text-2xl px-2 sm:px-4 md:px-6">
-              This is a New Year, make the most of it.
+              Life is for the living so live it, or you are better off dead. <br />
+              - Passenger.
             </p>
           </div>
         </FadeInWhenVisibleLeft>
