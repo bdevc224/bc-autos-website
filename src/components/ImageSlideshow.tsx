@@ -212,7 +212,7 @@ const ImageSlideshow: React.FC<ImageSlideshowProps> = ({
 
       {/* Indicators */}
       {showIndicators && images.length > 1 && (
-        <div className="absolute bottom-5 w-full flex justify-center gap-3">
+        <div className="absolute bottom-1.5 w-full flex justify-center gap-3">
           {images.map((_, index) => (
             <button
               key={index}
